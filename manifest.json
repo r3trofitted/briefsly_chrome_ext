@@ -1,8 +1,12 @@
 {
   "manifest_version": 3,
+  "permissions": [
+    "storage"
+  ],
   "name": "Briefsly Chrome Extension",
   "description": "A Chrome extension to use Briefsly from GitHub",
   "version": "1.0",
+  "options_page": "options.html",
   "content_scripts": [
     {
       "js": [
@@ -13,6 +17,9 @@
       ]
     }
   ],
+  "background": {
+    "service_worker": "scripts/token.js"
+  },
   "web_accessible_resources": [
     {
       "resources": [

@@ -39,6 +39,14 @@ document.addEventListener("turbo:before-fetch-request", async (event) => {
   console.debug("turbo:before-fetch-request", event.detail);
   
   event.preventDefault();
+
+  chrome.storage.sync.get(['token'], function(result) {
+    if (result.token) {
+      console.log('Token retrieved:', result.token);
+    } else {
+      console.log('Token not found.');
+    }
+  });
   
   // const token = await getSessionToken(window.app)
   // event.detail.fetchOptions.headers["Authorization"] = `Bearer ${token}`
