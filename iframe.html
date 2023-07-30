@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hackathon</title>
+    <script type="module" src="./scripts/turbo.js"></script>
+    <!-- <script type="module" src="./scripts/stimulus.js"></script> -->
+    <script type="module" src="./scripts/iframe.js"></script>
+  </head>
+  <body>
+    <!-- <div id="posts" data-controller="foo" data-foo-url-value="http://localhost:3000/posts">
+      <button data-action="foo#display">Click me!</button>
+    </div> -->
+      
+    <turbo-frame id="slots" src="http://localhost:3000/slots" loading="lazy">
+      <!-- see https://github.com/hotwired/turbo/issues/784 for the necessity of the loading="lazy" attribute -->
+    </turbo-frame>
+  </body>
+</html>

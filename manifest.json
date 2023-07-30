@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Briefsly Chrome Extension",
+  "description": "A Chrome extension to use Briefsly from GitHub",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/content.js"
+      ],
+      "matches": [
+        "https://*.github.com/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "scripts/turbo.js",
+        "scripts/stimulus.js",
+        "scripts/iframe.js",
+        "iframe.html"
+      ],
+      "matches": [
+        "https://*.github.com/*"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  }
+}
